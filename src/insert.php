@@ -84,7 +84,7 @@
                         $pdo= new PDO($connect,USER,PASS);
                         $sql=$pdo->query('select * from maker');
                         foreach($sql as $row){
-                            echo '<option value="'.$i.'">',$row['name'],'</option>';
+                            echo '<option value="'.$row['maker_id'].'">',$row['name'],'</option>';
                             $i++;
                         }
                     ?>

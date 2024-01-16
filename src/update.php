@@ -92,8 +92,7 @@ $connect = 'mysql:host='. SERVER . ';dbname='. DBNAME . ';charset=utf8';
                     $makers = $pdo->query('select * from maker');
                     $a = 1;
                     foreach ($makers as $maker) {
-                        echo '<option value="' . $a . '">', $maker['name'], '</option>';
-                        $a++;
+                        echo '<option value="' . $maker['maker_id'] . '">', $maker['name'], '</option>';
                     }
                     echo '</select>';
                     echo '<br>';
